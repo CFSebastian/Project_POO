@@ -56,6 +56,6 @@ int main() {
         window.clear();
         window.display();
     }
-
+    std::cout<<"hello";
     return 0;
 }
