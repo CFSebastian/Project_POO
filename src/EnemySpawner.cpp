@@ -21,11 +21,11 @@ Enemy EnemySpawner::smallZombi() {
 template<class T>
 Enemy EnemySpawner::generateEnamy(T enemyType) {
     enemyType=enemyType%10;
-    if(0<=enemyType<=4)
+    if(0<=enemyType&&enemyType<=4)
         return zombi();
-    if(5<=enemyType<=7)
+    if(5<=enemyType&&enemyType<=7)
         return golem();
-    if(8<=enemyType<=9)
+    if(8<=enemyType&&enemyType<=9)
         return smallZombi();
     return zombi();
 }

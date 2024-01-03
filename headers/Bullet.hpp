@@ -24,7 +24,7 @@ public:
 
     int getFireRate() const;
 
-    const sf::Vector2<float> &getVelocity() const;
+    //const sf::Vector2<float> &getVelocity() const;
 
     //void shoot(sf::Vector2<float> eCenter);
 

@@ -22,9 +22,9 @@ void Entity::eDraw(sf::RenderWindow &window) {
     //std::cout<<"after movet to :"<<shape.getPosition().x<<" "<<shape.getPosition().y<<"\n";
 }
 
-float Entity::getSpeed() const {
+/*float Entity::getSpeed() const {
     return speed;
-}
+}*/
 
 
 const sf::Vector2<float> &Entity::getCenter() const {

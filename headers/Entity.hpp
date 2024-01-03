@@ -29,7 +29,7 @@ public:
 
     virtual void eDraw(sf::RenderWindow &window);
 
-    float getSpeed() const;
+    //float getSpeed() const;
 
     int getHp() const;
 

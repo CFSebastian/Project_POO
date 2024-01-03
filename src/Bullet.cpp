@@ -31,9 +31,9 @@ void Bullet::setVelocity(const sf::Vector2<float> &aimDirNorm) {
     Bullet::velocity = aimDirNorm*speed;
 }
 
-const sf::Vector2<float> &Bullet::getVelocity() const {
+/*const sf::Vector2<float> &Bullet::getVelocity() const {
     return velocity;
-}
+}*/
 /*
 void Bullet::shoot(sf::Vector2<float> eCenter) {
 
