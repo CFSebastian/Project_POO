@@ -18,7 +18,7 @@ public:
     Bullet(int hp, float speed, const sf::CircleShape &shape, const sf::Vector2<float> &center, const sf::Color &eColor,
            int damage, const int &fireRate);
 
-    Bullet(const Bullet &bullet);
+    //Bullet(const Bullet &bullet);
 
     void eMove() override;
 
