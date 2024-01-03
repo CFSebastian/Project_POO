@@ -20,7 +20,9 @@ public:
     virtual ~Entity() = default;
 
     Entity(int hp, float speed, sf::CircleShape shape, const sf::Vector2<float> &center, const sf::Color &eColor);
-    //Entity(const Entity &entity);
+
+    Entity(const Entity &entity);
+
     Entity& operator=(const Entity &entity) ;
 
     const sf::Vector2<float> &getCenter() const;

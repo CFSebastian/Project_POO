@@ -132,7 +132,7 @@ void Game::runGame() {
         {
             gun1.setVelocity(aimDirNorm);
             gun1.setCenter(p.getCenter());
-            playerBullets.push_back(Bullet(gun1));
+            playerBullets.push_back(gun1);
             playerFire=0;
         }
         for(size_t i=0;i<playerBullets.size();i++) {

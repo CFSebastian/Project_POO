@@ -10,15 +10,18 @@ Entity::Entity(int hp, float speed, sf::CircleShape shape, const sf::Vector2<flo
 }
 Entity& Entity::operator=(const Entity &entity)
 {
+    this->HP=entity.HP;
+    this->speed=entity.speed;
+    this->shape=entity.shape;
     return *this;
 }
-/*Entity::Entity(const Entity &entity) {
+Entity::Entity(const Entity &entity) {
     this->HP=entity.HP;
     this->speed=entity.speed;
     this->shape=entity.shape;
     //this->center=entity.center;
     //this->eColor=entity.eColor;
-}*/
+}
 
 void Entity::eDraw(sf::RenderWindow &window) {
     window.draw(shape);
