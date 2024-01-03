@@ -108,7 +108,22 @@ endif()
 ###############################################################################
 
 # NOTE: update executable name in .github/workflows/cmake.yml:25 when changing name here
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} main.cpp
+        src/Entity.cpp
+        headers/Entity.hpp
+        src/Player.cpp
+        headers/Player.hpp
+        src/Enemy.cpp
+        headers/Enemy.hpp
+        src/Bullet.cpp
+        headers/Bullet.hpp
+        src/Game.cpp
+        headers/Game.hpp
+        src/User.cpp
+        headers/User.hpp
+        src/EnemySpawner.cpp
+        headers/EnemySpawner.hpp
+        headers/GameUI.hpp)
 
 ###############################################################################
 
