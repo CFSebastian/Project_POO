@@ -1,6 +1,9 @@
-//
-// Created by sebas on 04.12.2023.
-//
+/*
+ * Nume fisier:Game.phh
+ * Autor: Colt Sebastian
+ * Data: 03/01/2024
+ * Descriere: singleton design pattern
+ */
 
 #ifndef OOP_GAME_HPP
 #define OOP_GAME_HPP

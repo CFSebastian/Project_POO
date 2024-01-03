@@ -1,10 +1,13 @@
-//
-// Created by sebas on 04.12.2023.
-//
+/*
+ * Nume fisier:Game.cpp
+ * Autor: Colt Sebastian
+ * Data: 03/01/2024
+ * Descriere: singleton design pattern
+ */
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include <iostream>
-//#include <chrono>
+
 #include <thread>
 #include <math.h>
 #include <cstdlib>
@@ -27,31 +30,7 @@ void Game::runGame() {
     window.setVerticalSyncEnabled(true);
     window.setFramerateLimit(120);
     sf::Vector2f mousePos;
-    /*
-    //window.setFramerateLimit(120);
-    sf::CircleShape shape(20.f,5);
-    shape.setPosition(sf::Vector2(0.f,0.f));
-    sf::Color color;
-    color=sf::Color::Red;
-    shape.setFillColor(color);
 
-
-    sf::RectangleShape rect(sf::Vector2(50.f,100.f));
-    rect.setPosition(sf::Vector2(400.f,200.f));
-
-    sf::Vertex line[]={sf::Vertex(sf::Vector2f (100.f,400.f)),
-                       sf::Vertex(sf::Vector2(50.f,100.f))};
-    sf::ConvexShape con;
-    //resize it to 5 points
-    con.setPointCount(5);
-    con.setPosition(sf::Vector2(200.f,400.f));
-    //defin the points
-    con.setPoint(0,sf::Vector2f (0,0));
-    con.setPoint(1,sf::Vector2f (150,10));
-    con.setPoint(2,sf::Vector2f (120,90));
-    con.setPoint(3,sf::Vector2f (30,100));
-    con.setPoint(4,sf::Vector2f (0,50));
-*/
     sf::Vector2f center(100.f,100.f);
     sf::CircleShape shape(20.f,5);
     ///Bullets
@@ -60,7 +39,7 @@ void Game::runGame() {
     Bullet gun1(1,15,sf::CircleShape(10.f),sf::Vector2f (0.f,0.f),sf::Color::Yellow,50,25);
 
     ///PLayer
-    Player p(100,5,shape,center,sf::Color::White,gun1);
+    Player p(100,5,shape,center,sf::Color::White);
     sf::Vector2f playerPos;
     GameUI<int> ui(p.getHp(),p.getHpMax());
     ///Enemys
@@ -85,9 +64,7 @@ void Game::runGame() {
                     if(e.key.code == sf::Keyboard::Escape)
                         window.close();
                     break;
-                /*case sf::Event::KeyPressed:
-                    std::cout << "Received key " << (e.key.code == sf::Keyboard::X ? "X" : "(other)") << "\n";
-                    break;*/
+
                 default:
                     break;
             }
@@ -100,17 +77,13 @@ void Game::runGame() {
 
         ///PLayer
         p.eMove();
-        //p.shooting(window);
         playerPos=p.getCenter();
 
         ///Enemys
-        //directionDir=mousePos-playerPos;
-        //directionDirNorm=directionDir/(float)sqrt(pow(directionDir.x,2) + pow(directionDir.y,2));
-        //zombi.setVelocity(directionDirNorm);
+
         if(enemyCounter<40)
             enemyCounter++;
         if(enemyCounter>=40 && enemys.size()<50) {
-            //zombi.setCenter(sf::Vector2f(rand()%window.getSize().x,rand()%window.getSize().y));
             enemys.push_back(std::make_shared<Enemy>(EnemySpawner::generateEnamy<int>(rand())));
             enemys.back()->setCenter(sf::Vector2f(rand()%window.getSize().x,rand()%window.getSize().y));
             enemyCounter=0;
@@ -138,7 +111,7 @@ void Game::runGame() {
         for(size_t i=0;i<playerBullets.size();i++) {
             playerBullets[i].eMove();
             if(playerBullets[i].getCenter().y<-10||playerBullets[i].getCenter().x<-10||
-                    playerBullets[i].getCenter().y>window.getSize().y+10||playerBullets[i].getCenter().x>window.getSize().x+10)
+               playerBullets[i].getCenter().y>window.getSize().y+10||playerBullets[i].getCenter().x>window.getSize().x+10)
             {
                 playerBullets.erase(playerBullets.begin()+i);
             }
@@ -168,14 +141,9 @@ void Game::runGame() {
         ui.update(p.getHp());
         if(p.getHp()<0)
             window.close();
-        /*for(auto &enemy : enemys){
-            enemy->eMove();
-        }*/
-        //mousePos=sf::Vector2f(sf::Mouse::getPosition(window));
-        //shape.move(0.6f,0.3f);
-        //shape.rotate(5.f);
+
         ///Draw
-        // window.clear(sf::Color::Red);
+
         window.clear();
         ///Draw evrething
         ///Player draw
@@ -189,13 +157,7 @@ void Game::runGame() {
             bullet.eDraw(window);
         }
         ui.uDraw(window);
-        //window.draw(shape);
-        //window.draw(rect);
-        //window.display();
-        //window.draw(line,2,sf::Lines);
-        //window.draw(con);
-        //using namespace std::chrono_literals;
-        //std::this_thread::sleep_for(300ms);
+
         window.display();
 
     }

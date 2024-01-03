@@ -1,6 +1,9 @@
-//
-// Created by sebas on 04.12.2023.
-//
+/*
+ * Nume fisier:Bullet.phh
+ * Autor: Colt Sebastian
+ * Data: 03/01/2024
+ * Descriere:
+ */
 #include <SFML/Graphics.hpp>
 #ifndef OOP_BULLET_HPP
 #define OOP_BULLET_HPP
@@ -10,7 +13,6 @@ class Bullet : public Entity{
     int damage;
     int fireRate;
     sf::Vector2<float> velocity;
-    //sf::CircleShape shape;
 
 public:
     Bullet()=default;
@@ -23,10 +25,6 @@ public:
     void eMove() override;
 
     int getFireRate() const;
-
-    //const sf::Vector2<float> &getVelocity() const;
-
-    //void shoot(sf::Vector2<float> eCenter);
 
     void setVelocity(const sf::Vector2<float> &velocity);
 };

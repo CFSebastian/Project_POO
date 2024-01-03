@@ -1,6 +1,9 @@
-//
-// Created by sebas on 04.12.2023.
-//
+/*
+ * Nume fisier:Entity.phh
+ * Autor: Colt Sebastian
+ * Data: 03/01/2024
+ * Descriere:
+ */
 
 #ifndef OOP_ENTITY_HPP
 #define OOP_ENTITY_HPP
@@ -10,10 +13,7 @@ class Entity {
 protected:
     int HP;
     float speed;
-    //float size;
     sf::CircleShape shape;
-    //sf::Vector2<float> center;
-    //sf::Color eColor;
 public:
     Entity()=default;
 
@@ -31,7 +31,6 @@ public:
 
     virtual void eDraw(sf::RenderWindow &window);
 
-    //float getSpeed() const;
 
     int getHp() const;
 
@@ -43,6 +42,5 @@ public:
 
 
 };
-
 
 #endif //OOP_ENTITY_HPP

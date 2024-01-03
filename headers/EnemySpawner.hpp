@@ -1,6 +1,9 @@
-//
-// Created by sebas on 02.01.2024.
-//
+/*
+ * Nume fisier:EnemySpawner.phh
+ * Autor: Colt Sebastian
+ * Data: 03/01/2024
+ * Descriere: factory design pattern
+ */
 
 #ifndef OOP_ENEMYSPAWNER_HPP
 #define OOP_ENEMYSPAWNER_HPP

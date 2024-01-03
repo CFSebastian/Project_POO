@@ -119,8 +119,6 @@ add_executable(${PROJECT_NAME} main.cpp
         headers/Bullet.hpp
         src/Game.cpp
         headers/Game.hpp
-        src/User.cpp
-        headers/User.hpp
         src/EnemySpawner.cpp
         headers/EnemySpawner.hpp
         headers/GameUI.hpp)

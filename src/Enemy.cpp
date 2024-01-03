@@ -1,6 +1,9 @@
-//
-// Created by sebas on 04.12.2023.
-//
+/*
+ * Nume fisier:Enemy.cpp
+ * Autor: Colt Sebastian
+ * Data: 03/01/2024
+ * Descriere:
+ */
 
 #include "../headers/Enemy.hpp"
 

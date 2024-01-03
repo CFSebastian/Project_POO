@@ -1,6 +1,9 @@
-//
-// Created by sebas on 04.12.2023.
-//
+/*
+ * Nume fisier:Enemy.phh
+ * Autor: Colt Sebastian
+ * Data: 03/01/2024
+ * Descriere:
+ */
 #include <SFML/Graphics.hpp>
 #ifndef OOP_ENEMY_HPP
 #define OOP_ENEMY_HPP

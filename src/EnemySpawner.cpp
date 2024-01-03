@@ -1,9 +1,12 @@
-//
-// Created by sebas on 02.01.2024.
-//
+/*
+ * Nume fisier:EnemySpawner.cpp
+ * Autor: Colt Sebastian
+ * Data: 03/01/2024
+ * Descriere: factory design pattern
+ */
 
 #include "../headers/EnemySpawner.hpp"
-//#include <SFML/Graphics.hpp>
+
 #include <math.h>
 
 Enemy EnemySpawner::zombi() {
