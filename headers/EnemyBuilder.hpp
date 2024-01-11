@@ -17,7 +17,7 @@ public:
 class EnemyBuilder: public Builder{
     Enemy enemy;
 public:
-     EnemyBuilder();
+     EnemyBuilder()=default;
      void buildShape(const sf::CircleShape &shape, const sf::Vector2f &poz, const sf::Color &color) override;
      void buildHP (const int &HP) override;
      void buildSpeed (const float &speed ) override;

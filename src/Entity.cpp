@@ -7,7 +7,7 @@
 
 #include "../headers/Entity.hpp"
 
-Entity::Entity(const int &hp,const float &speed,const sf::CircleShape &shape, const sf::Vector2<float> &center, const sf::Color &eColor)
+Entity::Entity(const int &hp,const float &speed, sf::CircleShape shape, const sf::Vector2<float> &center, const sf::Color &eColor)
         : HP(hp), speed(speed), shape(shape) {
     this->shape.setPosition(center);
     this->shape.setFillColor(eColor);
