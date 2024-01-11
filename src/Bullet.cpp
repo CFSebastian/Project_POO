@@ -17,7 +17,7 @@ Bullet::Bullet(const Bullet &bullet) : Entity(bullet), damage(bullet.damage), fi
 
 Bullet& Bullet::operator=(const Bullet &bullet)
 {
-    this->HP=bullet.HP;
+    this->hp=bullet.hp;
     this->speed=bullet.speed;
     this->shape=bullet.shape;
     this->damage=bullet.damage;

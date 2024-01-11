@@ -11,7 +11,7 @@
 
 class Entity {
 protected:
-    int HP;
+    int hp;
     float speed;
     sf::CircleShape shape;
 public:

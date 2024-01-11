@@ -7,20 +7,21 @@
 
 #include "../headers/Entity.hpp"
 
-Entity::Entity(const int &hp,const float &speed, sf::CircleShape shape, const sf::Vector2<float> &center, const sf::Color &eColor)
-        : HP(hp), speed(speed), shape(shape) {
+Entity::Entity(const int &hp, const float &speed, sf::CircleShape shape, const sf::Vector2<float> &center, const sf::Color &eColor)
+        : hp(hp), speed(speed), shape(std::move(shape)) {
     this->shape.setPosition(center);
     this->shape.setFillColor(eColor);
 }
+
 Entity& Entity::operator = (const Entity &entity)
 {
-    this->HP=entity.HP;
+    this->hp=entity.hp;
     this->speed=entity.speed;
     this->shape=entity.shape;
     return *this;
 }
 Entity::Entity(const Entity &entity) {
-    this->HP=entity.HP;
+    this->hp=entity.hp;
     this->speed=entity.speed;
     this->shape=entity.shape;
 }
@@ -40,7 +41,7 @@ void Entity::setCenter(const sf::Vector2<float> &center) {
 }
 
 int Entity::getHp() const {
-    return HP;
+    return hp;
 }
 
 bool Entity::collison(Entity &e1, Entity &e2) {
@@ -50,7 +51,7 @@ bool Entity::collison(Entity &e1, Entity &e2) {
 }
 
 void Entity::setHp(int hp) {
-    HP = hp;
+    this->hp = hp;
 }
 
 void Entity::setShape(const sf::CircleShape &shape, const sf::Vector2f &poz, const sf::Color &color) {
