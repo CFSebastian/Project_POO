@@ -121,7 +121,9 @@ add_executable(${PROJECT_NAME} main.cpp
         headers/Game.hpp
         src/EnemySpawner.cpp
         headers/EnemySpawner.hpp
-        headers/GameUI.hpp)
+        headers/GameUI.hpp
+        src/EnemyBuilder.cpp
+        headers/EnemyBuilder.hpp)
 
 ###############################################################################
 

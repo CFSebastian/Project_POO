@@ -7,10 +7,12 @@
 
 ///My headers
 #include "headers/Game.hpp"
+#include <iostream>
 
 int main() {
 
-    ///Start game
+    std::cout<<"Enjoy the game";
+    ///Start 1 game
     Game& Game=Game::getInstance();
     Game.runGame();
 

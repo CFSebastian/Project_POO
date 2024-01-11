@@ -28,6 +28,8 @@ public:
 
     void setVelocity(const sf::Vector2<float> &velocity);
 
+    void setDamage(int damage);
+
 };
 
 

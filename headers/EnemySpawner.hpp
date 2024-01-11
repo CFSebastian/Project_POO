@@ -9,14 +9,16 @@
 #define OOP_ENEMYSPAWNER_HPP
 #include <cstdlib>
 #include "Enemy.hpp"
+#include "EnemyBuilder.hpp"
+
 class EnemySpawner {
 
 public:
     template <class T>
     static Enemy generateEnamy(T enemyType);
-    static Enemy zombi();
-    static Enemy golem();
-    static Enemy smallZombi();
+    static Enemy zombi(Builder &builder);
+    static Enemy golem(Builder &builder);
+    static Enemy smallZombi(Builder &builder);
 
 };
 

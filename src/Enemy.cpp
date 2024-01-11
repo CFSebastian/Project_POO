@@ -23,3 +23,7 @@ void Enemy::setVelocity(const sf::Vector2<float> &dirNorm) {
 int Enemy::getDamage() const {
     return damage;
 }
+
+void Enemy::setDamage(int damage) {
+    Enemy::damage = damage;
+}

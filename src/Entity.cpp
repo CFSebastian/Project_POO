@@ -11,7 +11,7 @@ Entity::Entity(int hp, float speed, sf::CircleShape shape, const sf::Vector2<flo
     this->shape.setPosition(center);
     this->shape.setFillColor(eColor);
 }
-Entity& Entity::operator=(const Entity &entity)
+Entity& Entity::operator = (const Entity &entity)
 {
     this->HP=entity.HP;
     this->speed=entity.speed;
@@ -50,6 +50,16 @@ bool Entity::collison(Entity &e1, Entity &e2) {
 
 void Entity::setHp(int hp) {
     HP = hp;
+}
+
+void Entity::setShape(const sf::CircleShape &shape, const sf::Vector2f &poz, const sf::Color &color) {
+    Entity::shape = shape;
+    Entity::shape.setPosition(poz);
+    Entity::shape.setFillColor(color);
+}
+
+void Entity::setSpeed(float speed) {
+    Entity::speed = speed;
 }
 
 
