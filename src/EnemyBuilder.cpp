@@ -3,9 +3,9 @@
 //
 
 #include "../headers/EnemyBuilder.hpp"
-EnemyBuilder::EnemyBuilder() {
+/*EnemyBuilder::EnemyBuilder() {
     enemy=Enemy();
-}
+}*/
  void EnemyBuilder::buildShape(const sf::CircleShape &shape, const sf::Vector2f &poz, const sf::Color &color)  {
     enemy.setShape(shape,poz,color);
 
