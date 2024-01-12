@@ -2,7 +2,7 @@
  * Nume fisier:EnemySpawner.cpp
  * Autor: Colt Sebastian
  * Data: 03/01/2024
- * Descriere: factory design pattern, a fost schimbat joi/1/2024 sa foloseasca builder-ul in loc de constractor-ul clasei 
+ * Descriere: factory design pattern, a fost schimbat joi/1/2024 sa foloseasca builder-ul in loc de constractor-ul clasei
  */
 
 #include "../headers/EnemySpawner.hpp"
@@ -35,39 +35,39 @@ Enemy EnemySpawner::smallZombi(EnemyBuilder &builder) {
 
 template<class T>
 Enemy EnemySpawner::generateEnamy(T enemyType) {
-    EnemyBuilder builderZ, builderG, builderSz;
+    EnemyBuilder spawnedEnemy;
     enemyType=enemyType%10;
     if(0<=enemyType&&enemyType<=4)
-        return zombi(builderZ);
+        return zombi(spawnedEnemy);
     if(5<=enemyType&&enemyType<=7)
-        return golem(builderG);
+        return golem(spawnedEnemy);
     if(8<=enemyType&&enemyType<=9)
-        return smallZombi(builderSz);
-    return zombi(builderZ);
+        return smallZombi(spawnedEnemy);
+    return zombi(spawnedEnemy);
 }
 
 template<>
 Enemy EnemySpawner::generateEnamy(int enemyType) {
-    EnemyBuilder builderZ, builderG, builderSz;
+    EnemyBuilder spawnedEnemy;
     enemyType=enemyType%10;
     if(0<=enemyType&&enemyType<=4)
-        return zombi(builderZ);
+        return zombi(spawnedEnemy);
     if(5<=enemyType&&enemyType<=7)
-        return golem(builderG);
+        return golem(spawnedEnemy);
     if(8<=enemyType&&enemyType<=9)
-        return smallZombi(builderSz);
-    return zombi(builderZ);
+        return smallZombi(spawnedEnemy);
+    return zombi(spawnedEnemy);
 }
 template<>
 Enemy EnemySpawner::generateEnamy(float enemyType) {
-    EnemyBuilder builderZ, builderG, builderSz;
+    EnemyBuilder spawnedEnemy;
     double integral;
     int fractional = (int)modf(enemyType, &integral)%10;
     if(0<=fractional && fractional<=4)
-        return zombi(builderZ);
+        return zombi(spawnedEnemy);
     if(5<=fractional && fractional<=7)
-        return golem(builderG);
+        return golem(spawnedEnemy);
     if(8<=fractional && fractional<=9)
-        return smallZombi(builderSz);
-    return zombi(builderZ);
+        return smallZombi(spawnedEnemy);
+    return zombi(spawnedEnemy);
 }
