@@ -2,7 +2,7 @@
  * Nume fisier:EnemySpawner.cpp
  * Autor: Colt Sebastian
  * Data: 03/01/2024
- * Descriere: factory design pattern
+ * Descriere: factory design pattern, a fost schimbat joi/1/2024 sa foloseasca builder-ul in loc de constractor-ul clasei 
  */
 
 #include "../headers/EnemySpawner.hpp"

@@ -30,3 +30,10 @@ void Enemy::setDamage(const int &damage) {
 
 Enemy::Enemy(int hp, float speed, const sf::CircleShape &shape, int damage) : Entity(hp, speed, shape),
                                                                               damage(damage) {}
+
+void Enemy::setShape(const sf::CircleShape &shape, const sf::Vector2f &poz, const sf::Color &color) {
+    Entity::shape = shape;
+    Entity::shape.setPosition(poz);
+    Entity::shape.setFillColor(color);
+    this->velocity=sf::Vector2f (0.f,0.f);
+}

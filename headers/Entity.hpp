@@ -42,7 +42,7 @@ public:
 
     void setHp(int hp);
 
-    void setShape(const sf::CircleShape &shape, const sf::Vector2f &poz, const sf::Color &color);
+    virtual void setShape(const sf::CircleShape &shape, const sf::Vector2f &poz, const sf::Color &color);
 
     void setSpeed(float speed);
 

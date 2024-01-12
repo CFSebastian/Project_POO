@@ -32,6 +32,7 @@ public:
 
     void setDamage(const int &damage);
 
+    void setShape(const sf::CircleShape &shape, const sf::Vector2f &poz, const sf::Color &color) override;
 };
 
 
