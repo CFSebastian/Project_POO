@@ -40,11 +40,11 @@ public:
 
     void setCenter(const sf::Vector2<float> &center);
 
-    void setHp(int hp);
+    virtual void setHp(int hp);
 
     virtual void setShape(const sf::CircleShape &shape, const sf::Vector2f &poz, const sf::Color &color);
 
-    void setSpeed(float speed);
+    virtual void setSpeed(float speed);
 
 
 };

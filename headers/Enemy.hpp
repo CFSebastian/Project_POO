@@ -30,9 +30,9 @@ public:
 
     void setVelocity(const sf::Vector2<float> &velocity);
 
-    void setDamage(const int &damage);
+    void setDamage(const int &_damage);
 
-    void setShape(const sf::CircleShape &shape, const sf::Vector2f &poz, const sf::Color &color) override;
+    void setShape(const sf::CircleShape &_shape, const sf::Vector2f &poz, const sf::Color &color) override;
 };
 
 
