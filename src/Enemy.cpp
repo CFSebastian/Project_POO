@@ -24,8 +24,8 @@ int Enemy::getDamage() const {
     return damage;
 }
 
-void Enemy::setDamage(const int &damage) {
-    this->damage = damage;
+void Enemy::setDamage(const int &_damage) {
+    this->damage = _damage;
 }
 
 Enemy::Enemy(int hp, float speed, const sf::CircleShape &shape, int damage) : Entity(hp, speed, shape),
