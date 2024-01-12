@@ -1,6 +1,9 @@
-//
-// Created by sebas on 11.01.2024.
-//
+/*
+ * Nume fisier:EnemySpawner.cpp
+ * Autor: Colt Sebastian
+ * Data: 11/01/2024
+ * Descriere: builder design pattern
+ */
 
 #include "../headers/EnemyBuilder.hpp"
 /*EnemyBuilder::EnemyBuilder() {

@@ -21,6 +21,8 @@ public:
 
     Entity(const int &hp,const  float &speed, sf::CircleShape shape, const sf::Vector2<float> &center, const sf::Color &eColor);
 
+    Entity(int hp, float speed, const sf::CircleShape &shape);
+
     Entity(const Entity &entity);
 
     Entity& operator=(const Entity &entity) ;

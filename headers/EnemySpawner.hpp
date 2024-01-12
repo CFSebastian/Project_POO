@@ -16,9 +16,9 @@ class EnemySpawner {
 public:
     template <class T>
     static Enemy generateEnamy(T enemyType);
-    static Enemy zombi(Builder &builder);
-    static Enemy golem(Builder &builder);
-    static Enemy smallZombi(Builder &builder);
+    static Enemy zombi(EnemyBuilder &builder);
+    static Enemy golem(EnemyBuilder &builder);
+    static Enemy smallZombi(EnemyBuilder &builder);
 
 };
 

@@ -9,7 +9,7 @@
 
 #include <math.h>
 
-Enemy EnemySpawner::zombi(Builder &builder) {
+Enemy EnemySpawner::zombi(EnemyBuilder &builder) {
     builder.buildDamage(25);
     builder.buildHP(100);
     builder.buildShape(sf::CircleShape(10.f,4),sf::Vector2f (500.f,500.f),sf::Color::Green);
@@ -17,7 +17,7 @@ Enemy EnemySpawner::zombi(Builder &builder) {
     return builder.getResult();
 }
 
-Enemy EnemySpawner::golem(Builder &builder) {
+Enemy EnemySpawner::golem(EnemyBuilder &builder) {
     builder.buildDamage(50);
     builder.buildHP(100);
     builder.buildShape(sf::CircleShape(20.f,8),sf::Vector2f (500.f,500.f),sf::Color::Blue);
@@ -25,7 +25,7 @@ Enemy EnemySpawner::golem(Builder &builder) {
     return builder.getResult();
 }
 
-Enemy EnemySpawner::smallZombi(Builder &builder) {
+Enemy EnemySpawner::smallZombi(EnemyBuilder &builder) {
     builder.buildDamage(12);
     builder.buildHP(100);
     builder.buildShape(sf::CircleShape(5.f,4),sf::Vector2f (500.f,500.f),sf::Color::Cyan);
@@ -35,39 +35,39 @@ Enemy EnemySpawner::smallZombi(Builder &builder) {
 
 template<class T>
 Enemy EnemySpawner::generateEnamy(T enemyType) {
-    EnemyBuilder builder1;
+    EnemyBuilder builderZ, builderG, builderSz;
     enemyType=enemyType%10;
     if(0<=enemyType&&enemyType<=4)
-        return zombi(builder1);
+        return zombi(builderZ);
     if(5<=enemyType&&enemyType<=7)
-        return golem(builder1);
+        return golem(builderG);
     if(8<=enemyType&&enemyType<=9)
-        return smallZombi(builder1);
-    return zombi(builder1);
+        return smallZombi(builderSz);
+    return zombi(builderZ);
 }
 
 template<>
 Enemy EnemySpawner::generateEnamy(int enemyType) {
-    EnemyBuilder builder1;
+    EnemyBuilder builderZ, builderG, builderSz;
     enemyType=enemyType%10;
     if(0<=enemyType&&enemyType<=4)
-        return zombi(builder1);
+        return zombi(builderZ);
     if(5<=enemyType&&enemyType<=7)
-        return golem(builder1);
+        return golem(builderG);
     if(8<=enemyType&&enemyType<=9)
-        return smallZombi(builder1);
-    return zombi(builder1);
+        return smallZombi(builderSz);
+    return zombi(builderZ);
 }
 template<>
 Enemy EnemySpawner::generateEnamy(float enemyType) {
-    EnemyBuilder builder1;
+    EnemyBuilder builderZ, builderG, builderSz;
     double integral;
     int fractional = (int)modf(enemyType, &integral)%10;
     if(0<=fractional && fractional<=4)
-        return zombi(builder1);
+        return zombi(builderZ);
     if(5<=fractional && fractional<=7)
-        return golem(builder1);
+        return golem(builderG);
     if(8<=fractional && fractional<=9)
-        return smallZombi(builder1);
-    return zombi(builder1);
+        return smallZombi(builderSz);
+    return zombi(builderZ);
 }

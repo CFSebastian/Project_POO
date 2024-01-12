@@ -20,6 +20,8 @@ public:
     Enemy(int hp, float speed, const sf::CircleShape &shape, const sf::Vector2<float> &center, const sf::Color &eColor,
           int damage);
 
+    Enemy(int hp, float speed, const sf::CircleShape &shape, int damage);
+
     Enemy(const Enemy &enemy);
 
     void eMove() override;
@@ -28,7 +30,7 @@ public:
 
     void setVelocity(const sf::Vector2<float> &velocity);
 
-    void setDamage(int damage);
+    void setDamage(const int &damage);
 
 };
 

@@ -64,4 +64,6 @@ void Entity::setSpeed(float speed) {
     Entity::speed = speed;
 }
 
+Entity::Entity(int hp, float speed, const sf::CircleShape &shape) : hp(hp), speed(speed), shape(shape) {}
+
 
